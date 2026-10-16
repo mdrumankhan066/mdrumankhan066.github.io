@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MD RUMAN KHAN | Civil Engineer & Infrastructure Specialist</title>
+  <title>Engr. MD RUMAN KHAN | Civil Engineering Portfolio</title>
   
   <!-- FontAwesome Icons & Google Fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -17,7 +17,7 @@
       --bg-dark: #0a0f1d;
       --accent-blue: #38bdf8;
       --accent-red: #ef4444;
-      --glass-bg: rgba(15, 23, 42, 0.65);
+      --glass-bg: rgba(15, 23, 42, 0.75);
       --glass-border: rgba(255, 255, 255, 0.15);
       --text-light: #f8fafc;
       --text-muted: #cbd5e1;
@@ -37,31 +37,27 @@
       overflow-x: hidden;
     }
 
-    /* Floating Movable Glass Taskbar */
+    /* Full Width Glass Taskbar - Pushed to Two Corners */
     .taskbar {
       position: fixed;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 90%;
-      max-width: 1000px;
-      padding: 16px 30px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 16px 5%; /* Pushed to outer edges */
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(15, 23, 42, 0.75);
+      background: rgba(10, 15, 29, 0.85);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border: 1px solid var(--glass-border);
-      border-radius: 50px;
+      border-bottom: 2px solid rgba(239, 68, 68, 0.4);
       z-index: 10000;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      animation: floatNav 4s ease-in-out infinite alternate;
     }
 
-    @keyframes floatNav {
-      0% { transform: translateX(-50%) translateY(0px); }
-      100% { transform: translateX(-50%) translateY(-6px); }
+    .brand-container {
+      display: flex;
+      flex-direction: column;
     }
 
     .logo {
@@ -70,7 +66,14 @@
       background: linear-gradient(90deg, var(--accent-blue), var(--accent-red));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      letter-spacing: 1.2px;
+      letter-spacing: 1px;
+    }
+
+    .brand-email {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-top: -2px;
     }
 
     .nav-links {
@@ -84,7 +87,7 @@
       text-decoration: none;
       font-size: 15px;
       font-weight: 600;
-      padding: 8px 16px;
+      padding: 8px 18px;
       border-radius: 25px;
       transition: all 0.3s ease;
     }
@@ -100,10 +103,11 @@
       position: relative;
       min-height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 140px 8% 60px;
+      padding: 130px 5% 60px;
       overflow: hidden;
     }
 
@@ -140,7 +144,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: radial-gradient(circle at center, rgba(10, 15, 29, 0.65) 0%, rgba(10, 15, 29, 0.92) 100%);
+      background: radial-gradient(circle at center, rgba(10, 15, 29, 0.7) 0%, rgba(10, 15, 29, 0.95) 100%);
       z-index: 2;
     }
 
@@ -148,14 +152,15 @@
       position: relative;
       z-index: 3;
       max-width: 900px;
+      margin-bottom: 40px;
     }
 
-    /* Static Non-Rotating Profile Pic with Pulse Effect */
+    /* Static Non-Rotating Profile Pic with Pulsing Glow */
     .profile-img-container {
       position: relative;
-      width: 210px;
-      height: 210px;
-      margin: 0 auto 25px;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 20px;
       border-radius: 50%;
       padding: 6px;
       background: linear-gradient(135deg, var(--accent-blue), var(--accent-red));
@@ -176,24 +181,83 @@
     }
 
     .hero-content h1 {
-      font-size: 52px;
+      font-size: 48px;
       font-weight: 800;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       background: linear-gradient(90deg, #ffffff 0%, var(--accent-blue) 50%, #f87171 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     .hero-content p {
-      font-size: 20px;
+      font-size: 19px;
       color: var(--text-muted);
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
-    /* Transparent Glassmorphism Cards */
+    /* Front Page Animated Infrastructure Section */
+    .infra-showcase {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      max-width: 1200px;
+      margin-top: 20px;
+    }
+
+    .infra-showcase h3 {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: var(--accent-blue);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .infra-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 18px;
+    }
+
+    .infra-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 22px 15px;
+      text-align: center;
+      transition: all 0.4s ease;
+    }
+
+    .infra-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--accent-red);
+      box-shadow: 0 10px 25px rgba(239, 68, 68, 0.3);
+    }
+
+    .infra-card i {
+      font-size: 38px;
+      color: var(--accent-blue);
+      margin-bottom: 12px;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .infra-card:hover i {
+      color: var(--accent-red);
+      transform: scale(1.15);
+    }
+
+    .infra-card h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-light);
+    }
+
+    /* Section & Cards Base */
     section {
       min-height: 100vh;
-      padding: 120px 8% 60px;
+      padding: 120px 5% 60px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -229,7 +293,6 @@
     .glass-card {
       background: var(--glass-bg);
       backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
       border: 1px solid var(--glass-border);
       border-radius: 20px;
       padding: 30px;
@@ -243,7 +306,6 @@
       box-shadow: 0 12px 40px rgba(56, 189, 248, 0.25);
     }
 
-    /* Software Icon Boxes */
     .software-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -272,14 +334,13 @@
       color: var(--accent-blue);
     }
 
-    /* Buttons */
     .btn-glow {
       display: inline-block;
-      padding: 14px 36px;
+      padding: 12px 32px;
       background: linear-gradient(90deg, var(--accent-blue), var(--accent-red));
       color: #fff;
       font-weight: 700;
-      font-size: 16px;
+      font-size: 15px;
       border-radius: 35px;
       text-decoration: none;
       box-shadow: 0 4px 20px rgba(239, 68, 68, 0.4);
@@ -303,17 +364,20 @@
     }
 
     @media (max-width: 768px) {
-      .hero-content h1 { font-size: 36px; }
+      .hero-content h1 { font-size: 34px; }
       .nav-links { display: none; }
-      .taskbar { width: 95%; padding: 12px 20px; }
+      .taskbar { padding: 12px 5%; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Floating Animated Taskbar -->
+  <!-- Full-Width Glass Taskbar -->
   <div class="taskbar">
-    <div class="logo">MD RUMAN KHAN</div>
+    <div class="brand-container">
+      <div class="logo">Engr. MD RUMAN KHAN</div>
+      <div class="brand-email">mdrumankhan044@gmail.com</div>
+    </div>
     <ul class="nav-links">
       <li><a href="#hero">Home</a></li>
       <li><a href="#skills">Toolkit</a></li>
@@ -325,13 +389,10 @@
   <!-- Hero Section with Background Infrastructure Image Slider -->
   <section id="hero">
     <div class="slider-bg">
-      <!-- 1. Scenic Highway Road -->
+      <!-- High Quality Infrastructure Image Slides -->
       <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=1920&q=80');"></div>
-      <!-- 2. Sustainable Green High-Rise Building -->
       <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=1920&q=80');"></div>
-      <!-- 3. Red Steel Truss Bridge -->
       <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1590483736622-39da86788790?auto=format&fit=crop&w=1920&q=80');"></div>
-      <!-- 4. Modern Glowing Tunnel -->
       <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1920&q=80');"></div>
     </div>
     <div class="slider-overlay"></div>
@@ -339,11 +400,49 @@
     <div class="hero-content" data-aos="fade-up">
       <div class="profile-img-container">
         <!-- Static Profile Photo -->
-        <img src="profile.jpg" alt="MD RUMAN KHAN" class="profile-img">
+        <img src="profile.jpg" alt="Engr. MD RUMAN KHAN" class="profile-img">
       </div>
-      <h1>MD RUMAN KHAN</h1>
+      <h1>Engr. MD RUMAN KHAN</h1>
       <p>Civil Engineer | Structural Design, High-Rise & Hydrology Researcher</p>
       <a href="#contact" class="btn-glow">Get In Touch <i class="fas fa-arrow-down"></i></a>
+    </div>
+
+    <!-- Front Page Infrastructure Showcase -->
+    <div class="infra-showcase" data-aos="fade-up" data-aos-delay="200">
+      <h3>Engineering Specializations</h3>
+      <div class="infra-grid">
+        
+        <div class="infra-card">
+          <i class="fas fa-road"></i>
+          <h4>Highway Design</h4>
+        </div>
+
+        <div class="infra-card">
+          <i class="fas fa-archway"></i>
+          <h4>Bridge Engineering</h4>
+        </div>
+
+        <div class="infra-card">
+          <i class="fas fa-water"></i>
+          <h4>Concrete Culvert</h4>
+        </div>
+
+        <div class="infra-card">
+          <i class="fas fa-mountain"></i>
+          <h4>Tunnel Infrastructure</h4>
+        </div>
+
+        <div class="infra-card">
+          <i class="fas fa-building"></i>
+          <h4>High-Rise Building</h4>
+        </div>
+
+        <div class="infra-card">
+          <i class="fas fa-train"></i>
+          <h4>Railway Track</h4>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -356,7 +455,7 @@
         <div class="software-icon"><i class="fas fa-cubes"></i></div>
         <div>
           <h4>ETABS</h4>
-          <p style="font-size: 12px; color: var(--text-muted);">Building Analysis</p>
+          <p style="font-size: 12px; color: var(--text-muted);">Multi-Story Analysis</p>
         </div>
       </div>
 
@@ -380,7 +479,7 @@
         <div class="software-icon"><i class="fab fa-python"></i></div>
         <div>
           <h4>Python / CDO</h4>
-          <p style="font-size: 12px; color: var(--text-muted);">Climate Analysis</p>
+          <p style="font-size: 12px; color: var(--text-muted);">Climate Model Data</p>
         </div>
       </div>
 
@@ -389,7 +488,7 @@
 
   <!-- Research & Projects -->
   <section id="projects">
-    <h2 class="section-title" data-aos="fade-right">Featured Projects</h2>
+    <h2 class="section-title" data-aos="fade-right">Featured Projects & Research</h2>
     <div class="grid-container">
       
       <div class="glass-card" data-aos="fade-up">
@@ -418,9 +517,9 @@
       
       <div class="glass-card" data-aos="fade-up">
         <i class="fas fa-envelope-open-text" style="font-size: 35px; color: var(--accent-blue); margin-bottom: 15px;"></i>
-        <h3>Direct Connect</h3>
+        <h3>Direct Contact</h3>
         <p style="color: var(--text-muted); margin-top: 10px;"><strong>Location:</strong> Gazipur, Dhaka, Bangladesh</p>
-        <p style="color: var(--text-muted);"><strong>Email:</strong> your.email@example.com</p>
+        <p style="color: var(--text-muted);"><strong>Email:</strong> mdrumankhan044@gmail.com</p>
         <div style="margin-top: 25px;">
           <a href="cv.pdf" download class="btn-glow"><i class="fas fa-download"></i> Download Full CV</a>
         </div>
@@ -441,10 +540,10 @@
   </section>
 
   <footer>
-    <p>© 2026 MD RUMAN KHAN | Civil Engineering Portfolio</p>
+    <p>© 2026 Engr. MD RUMAN KHAN | Civil Engineering Portfolio</p>
   </footer>
 
-  <!-- AOS Script & Background Image Slider Script -->
+  <!-- AOS Script & Background Auto Slider Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1000, once: true });
