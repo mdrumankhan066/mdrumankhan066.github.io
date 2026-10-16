@@ -1,564 +1,1693 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Engr. MD RUMAN KHAN | Civil Engineering Portfolio</title>
-  
-  <!-- FontAwesome Icons & Google Fonts -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- AOS Animation Library CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d18">
+<meta name="description" content="MD Ruman Khan — Civil Engineering Portfolio, DUET Bangladesh. Structural Engineering, AutoCAD, ETABS and Water Resources Research.">
 
-  <style>
-    :root {
-      --bg-dark: #0a0f1d;
-      --accent-blue: #38bdf8;
-      --accent-red: #ef4444;
-      --glass-bg: rgba(15, 23, 42, 0.75);
-      --glass-border: rgba(255, 255, 255, 0.15);
-      --text-light: #f8fafc;
-      --text-muted: #cbd5e1;
-    }
+<title>MD Ruman Khan | Civil Engineering Portfolio</title>
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-      scroll-behavior: smooth;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    body {
-      background-color: var(--bg-dark);
-      color: var(--text-light);
-      overflow-x: hidden;
-    }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    /* Full Width Glass Taskbar - Pushed to Two Corners */
-    .taskbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 16px 5%; /* Pushed to outer edges */
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(10, 15, 29, 0.85);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 2px solid rgba(239, 68, 68, 0.4);
-      z-index: 10000;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    }
+<style>
+:root {
+  --bg: #080d18;
+  --bg2: #0d1526;
+  --card: rgba(17, 28, 47, .76);
+  --blue: #38bdf8;
+  --cyan: #67e8f9;
+  --red: #fb7185;
+  --white: #f4f7ff;
+  --muted: #9eacc2;
+  --border: rgba(148, 180, 220, .15);
+  --max: 1180px;
+}
 
-    .brand-container {
-      display: flex;
-      flex-direction: column;
-    }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-    .logo {
-      font-size: 22px;
-      font-weight: 800;
-      background: linear-gradient(90deg, var(--accent-blue), var(--accent-red));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      letter-spacing: 1px;
-    }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 95px;
+}
 
-    .brand-email {
-      font-size: 12px;
-      color: var(--text-muted);
-      font-weight: 500;
-      margin-top: -2px;
-    }
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
 
-    .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 20px;
-    }
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 10% 15%, rgba(56,189,248,.10), transparent 36%),
+    radial-gradient(ellipse at 90% 55%, rgba(129,85,245,.08), transparent 35%);
+}
 
-    .nav-links a {
-      color: var(--text-light);
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 600;
-      padding: 8px 18px;
-      border-radius: 25px;
-      transition: all 0.3s ease;
-    }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }
 
-    .nav-links a:hover {
-      color: #fff;
-      background: linear-gradient(90deg, rgba(56, 189, 248, 0.3), rgba(239, 68, 68, 0.3));
-      box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
-    }
+.container {
+  width: min(var(--max), 90%);
+  margin-inline: auto;
+}
 
-    /* Full-Screen Animated Hero Slider */
-    #hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 130px 5% 60px;
-      overflow: hidden;
-    }
+.gradient-text {
+  background: linear-gradient(110deg, #fff 10%, var(--blue) 48%, var(--red) 95%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 
-    .slider-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-    }
+.eyebrow {
+  color: var(--cyan);
+  font-size: .76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-    .slide {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      opacity: 0;
-      transition: opacity 1.5s ease-in-out, transform 6s ease-in-out;
-      transform: scale(1.05);
-    }
+.eyebrow::before {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--blue), var(--red));
+}
 
-    .slide.active {
-      opacity: 1;
-      transform: scale(1);
-    }
+.section {
+  padding: 105px 0;
+  position: relative;
+}
 
-    .slider-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at center, rgba(10, 15, 29, 0.7) 0%, rgba(10, 15, 29, 0.95) 100%);
-      z-index: 2;
-    }
+.section-heading {
+  max-width: 690px;
+  margin-bottom: 42px;
+}
 
-    .hero-content {
-      position: relative;
-      z-index: 3;
-      max-width: 900px;
-      margin-bottom: 40px;
-    }
+.section-heading h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+  margin: 13px 0;
+}
 
-    /* Static Non-Rotating Profile Pic with Pulsing Glow */
-    .profile-img-container {
-      position: relative;
-      width: 200px;
-      height: 200px;
-      margin: 0 auto 20px;
-      border-radius: 50%;
-      padding: 6px;
-      background: linear-gradient(135deg, var(--accent-blue), var(--accent-red));
-      animation: pulseGlow 3s infinite alternate ease-in-out;
-    }
+.section-heading p {
+  color: var(--muted);
+  max-width: 620px;
+}
 
-    @keyframes pulseGlow {
-      0% { box-shadow: 0 0 20px rgba(56, 189, 248, 0.5), 0 0 35px rgba(239, 68, 68, 0.3); }
-      100% { box-shadow: 0 0 40px rgba(56, 189, 248, 0.9), 0 0 60px rgba(239, 68, 68, 0.8); }
-    }
+/* NAVIGATION */
 
-    .profile-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-      display: block;
-    }
+.navbar {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+  background: rgba(8,13,24,.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: background .3s, box-shadow .3s;
+}
 
-    .hero-content h1 {
-      font-size: 48px;
-      font-weight: 800;
-      margin-bottom: 10px;
-      background: linear-gradient(90deg, #ffffff 0%, var(--accent-blue) 50%, #f87171 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+.navbar.scrolled {
+  background: rgba(8,13,24,.96);
+  box-shadow: 0 8px 35px rgba(0,0,0,.25);
+}
 
-    .hero-content p {
-      font-size: 19px;
-      color: var(--text-muted);
-      margin-bottom: 25px;
-    }
+.nav-inner {
+  min-height: 88px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
 
-    /* Front Page Animated Infrastructure Section */
-    .infra-showcase {
-      position: relative;
-      z-index: 3;
-      width: 100%;
-      max-width: 1200px;
-      margin-top: 20px;
-    }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+}
 
-    .infra-showcase h3 {
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      color: var(--accent-blue);
-      margin-bottom: 20px;
-      text-transform: uppercase;
-    }
+.logo-mark {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  flex: 0 0 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 17px;
+  background: linear-gradient(145deg, #102a45, #12152a);
+  border: 1px solid rgba(56,189,248,.65);
+  box-shadow: 0 0 22px rgba(56,189,248,.18);
+  overflow: hidden;
+}
 
-    .infra-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-      gap: 18px;
-    }
+.logo-mark::before {
+  content: "";
+  position: absolute;
+  width: 160%;
+  height: 160%;
+  background: conic-gradient(transparent, var(--blue), transparent 38%, var(--red), transparent 65%);
+  animation: logoSpin 7s linear infinite;
+}
 
-    .infra-card {
-      background: var(--glass-bg);
-      backdrop-filter: blur(15px);
-      -webkit-backdrop-filter: blur(15px);
-      border: 1px solid var(--glass-border);
-      border-radius: 16px;
-      padding: 22px 15px;
-      text-align: center;
-      transition: all 0.4s ease;
-    }
+.logo-mark::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: 15px;
+  background: #101a2b;
+}
 
-    .infra-card:hover {
-      transform: translateY(-8px);
-      border-color: var(--accent-red);
-      box-shadow: 0 10px 25px rgba(239, 68, 68, 0.3);
-    }
+.logo-mark span {
+  position: relative;
+  z-index: 1;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  background: linear-gradient(110deg, white, var(--cyan), var(--red));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
 
-    .infra-card i {
-      font-size: 38px;
-      color: var(--accent-blue);
-      margin-bottom: 12px;
-      transition: transform 0.3s ease, color 0.3s ease;
-    }
+@keyframes logoSpin { to { transform: rotate(360deg); } }
 
-    .infra-card:hover i {
-      color: var(--accent-red);
-      transform: scale(1.15);
-    }
+.brand-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(16px, 2vw, 22px);
+  font-weight: 800;
+  letter-spacing: -.5px;
+  white-space: nowrap;
+}
 
-    .infra-card h4 {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--text-light);
-    }
+.brand-sub {
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
 
-    /* Section & Cards Base */
-    section {
-      min-height: 100vh;
-      padding: 120px 5% 60px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: relative;
-      z-index: 3;
-    }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+}
 
-    .section-title {
-      font-size: 36px;
-      font-weight: 800;
-      margin-bottom: 40px;
-      position: relative;
-      display: inline-block;
-    }
+.nav-links a {
+  display: inline-block;
+  padding: 10px 13px;
+  color: #c0cbdd;
+  font-size: 13px;
+  font-weight: 600;
+  transition: color .25s, background .25s;
+  border-radius: 10px;
+}
 
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 60%;
-      height: 4px;
-      background: linear-gradient(90deg, var(--accent-blue), var(--accent-red));
-      border-radius: 2px;
-    }
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--cyan);
+  background: rgba(56,189,248,.08);
+}
 
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-    }
+.nav-links .nav-contact {
+  border: 1px solid rgba(56,189,248,.45);
+  color: var(--cyan);
+}
 
-    .glass-card {
-      background: var(--glass-bg);
-      backdrop-filter: blur(16px);
-      border: 1px solid var(--glass-border);
-      border-radius: 20px;
-      padding: 30px;
-      transition: all 0.4s ease;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    }
+.menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  background: var(--card);
+  color: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+}
 
-    .glass-card:hover {
-      transform: translateY(-8px);
-      border-color: var(--accent-blue);
-      box-shadow: 0 12px 40px rgba(56, 189, 248, 0.25);
-    }
+/* HERO */
 
-    .software-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-    }
+.hero {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 140px 0 75px;
+  overflow: hidden;
+  isolation: isolate;
+}
 
-    .software-box {
-      background: var(--glass-bg);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--glass-border);
-      border-radius: 16px;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      transition: all 0.3s ease;
-    }
+.hero-slides, .hero-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
 
-    .software-box:hover {
-      border-color: var(--accent-red);
-      transform: scale(1.04);
-    }
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.08);
+  transition: opacity 1.6s ease, transform 8s ease;
+}
 
-    .software-icon {
-      font-size: 28px;
-      color: var(--accent-blue);
-    }
+.hero-slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
 
-    .btn-glow {
-      display: inline-block;
-      padding: 12px 32px;
-      background: linear-gradient(90deg, var(--accent-blue), var(--accent-red));
-      color: #fff;
-      font-weight: 700;
-      font-size: 15px;
-      border-radius: 35px;
-      text-decoration: none;
-      box-shadow: 0 4px 20px rgba(239, 68, 68, 0.4);
-      transition: all 0.3s ease;
-    }
+.hero-shade {
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(8,13,24,.97) 0%, rgba(8,13,24,.83) 58%, rgba(8,13,24,.65) 100%),
+    linear-gradient(0deg, var(--bg), transparent 55%);
+}
 
-    .btn-glow:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 30px rgba(56, 189, 248, 0.7);
-    }
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .11;
+  background-image:
+    linear-gradient(rgba(56,189,248,.22) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56,189,248,.22) 1px, transparent 1px);
+  background-size: 55px 55px;
+  mask-image: linear-gradient(90deg, black, transparent 85%);
+}
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: rgba(5, 8, 18, 0.95);
-      color: var(--text-muted);
-      border-top: 1px solid rgba(239, 68, 68, 0.2);
-      font-weight: 600;
-      position: relative;
-      z-index: 10;
-    }
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1.35fr .65fr;
+  align-items: center;
+  gap: 55px;
+}
 
-    @media (max-width: 768px) {
-      .hero-content h1 { font-size: 34px; }
-      .nav-links { display: none; }
-      .taskbar { padding: 12px 5%; }
-    }
-  </style>
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(103,232,249,.25);
+  border-radius: 30px;
+  padding: 8px 14px;
+  color: #c5f7ff;
+  font-size: 12px;
+  background: rgba(56,189,248,.08);
+  margin-bottom: 26px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 12px #4ade80;
+  animation: blink 1.8s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: .4; }
+}
+
+.hero h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.8rem, 6.5vw, 5.7rem);
+  line-height: 1.02;
+  letter-spacing: -3px;
+  font-weight: 800;
+  margin-bottom: 23px;
+}
+
+.hero h1 .second-line {
+  display: block;
+  margin-top: 9px;
+}
+
+.hero-role {
+  color: var(--cyan);
+  font-size: clamp(15px, 2vw, 20px);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.hero-description {
+  color: #b6c2d5;
+  max-width: 640px;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 21px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 13px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform .3s, box-shadow .3s, border-color .3s;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+}
+
+.btn-primary {
+  color: #06111d;
+  background: linear-gradient(110deg, var(--cyan), var(--blue));
+  box-shadow: 0 8px 28px rgba(56,189,248,.2);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 12px 36px rgba(56,189,248,.35);
+}
+
+.btn-outline {
+  border-color: var(--border);
+  color: var(--white);
+  background: rgba(255,255,255,.035);
+}
+
+.btn-outline:hover { border-color: var(--blue); }
+
+.hero-socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.hero-socials a {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: #b8c8dc;
+  transition: .3s;
+}
+
+.hero-socials a:hover {
+  color: var(--cyan);
+  border-color: var(--blue);
+  transform: translateY(-4px);
+}
+
+.profile-wrap {
+  position: relative;
+  width: min(100%, 355px);
+  aspect-ratio: 4 / 5;
+  margin-inline: auto;
+  padding: 5px;
+  border-radius: 190px 190px 30px 30px;
+  background: linear-gradient(145deg, var(--cyan), #3149a5 52%, var(--red));
+  box-shadow: 0 0 70px rgba(56,189,248,.17);
+  animation: floatPhoto 6s ease-in-out infinite;
+}
+
+@keyframes floatPhoto {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.profile-inner {
+  position: relative;
+  height: 100%;
+  border-radius: 185px 185px 26px 26px;
+  overflow: hidden;
+  background: #142035;
+}
+
+.profile-inner img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform .7s;
+}
+
+.profile-wrap:hover img { transform: scale(1.04); }
+
+.profile-caption {
+  position: absolute;
+  bottom: 15px;
+  left: 14px;
+  right: 14px;
+  padding: 14px;
+  border: 1px solid rgba(255,255,255,.16);
+  background: rgba(8,13,24,.83);
+  backdrop-filter: blur(14px);
+  border-radius: 15px;
+}
+
+.profile-caption strong { display: block; font-size: 14px; }
+.profile-caption span { font-size: 11px; color: var(--muted); }
+
+.photo-orbit {
+  position: absolute;
+  width: 85px;
+  height: 85px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(103,232,249,.4);
+  border-radius: 23px;
+  color: var(--cyan);
+  background: rgba(11,25,44,.9);
+  font-size: 30px;
+  box-shadow: 0 10px 35px rgba(0,0,0,.3);
+  animation: floatPhoto 5s ease-in-out infinite reverse;
+}
+
+.orbit-one { top: 18%; left: -38px; }
+.orbit-two { right: -30px; bottom: 24%; color: var(--red); }
+
+/* STATS */
+
+.stats {
+  position: relative;
+  z-index: 2;
+  margin-top: -30px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: rgba(14,23,39,.91);
+  backdrop-filter: blur(16px);
+  overflow: hidden;
+}
+
+.stat {
+  padding: 26px 15px;
+  text-align: center;
+}
+
+.stat + .stat { border-left: 1px solid var(--border); }
+
+.stat strong {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--cyan);
+  font-size: clamp(19px, 3vw, 29px);
+}
+
+.stat span { color: var(--muted); font-size: 12px; }
+
+/* CARDS */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.card {
+  position: relative;
+  background: linear-gradient(145deg, rgba(20,33,54,.85), rgba(12,20,35,.88));
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 27px;
+  overflow: hidden;
+  transition: transform .35s, border-color .35s, box-shadow .35s;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--blue), transparent);
+  opacity: 0;
+  transition: opacity .35s;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(56,189,248,.42);
+  box-shadow: 0 18px 45px rgba(0,0,0,.23);
+}
+
+.card:hover::before { opacity: 1; }
+
+.card-icon {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  margin-bottom: 21px;
+  font-size: 23px;
+  color: var(--cyan);
+  background: rgba(56,189,248,.1);
+  border: 1px solid rgba(56,189,248,.15);
+}
+
+.card h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.card p { color: var(--muted); font-size: 13px; }
+
+.card-label {
+  display: inline-block;
+  color: var(--cyan);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* ABOUT */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: start;
+}
+
+.about-copy p {
+  color: var(--muted);
+  font-size: 15px;
+  margin-bottom: 17px;
+}
+
+.about-copy strong { color: var(--white); }
+
+.info-panel {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--card);
+}
+
+.info-row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 14px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.info-row:last-child { border-bottom: 0; }
+.info-row span { color: var(--muted); }
+.info-row strong { font-weight: 600; overflow-wrap: anywhere; }
+
+/* SKILLS */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.skill {
+  min-height: 125px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 11px;
+  padding: 21px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  transition: .3s;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+  border-color: rgba(56,189,248,.5);
+  background: rgba(21,42,66,.85);
+}
+
+.skill i { font-size: 27px; color: var(--cyan); }
+.skill strong { font-size: 13px; }
+.skill span { color: var(--muted); font-size: 11px; }
+
+/* PROJECTS */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+}
+
+.project-card .project-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.project-top .card-icon { margin: 0; }
+
+.project-number {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 27px;
+  color: rgba(103,232,249,.35);
+  font-weight: 700;
+}
+
+.project-card p { flex: 1; }
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.project-tags span {
+  padding: 5px 9px;
+  border-radius: 8px;
+  color: #b7eafa;
+  background: rgba(56,189,248,.08);
+  border: 1px solid rgba(56,189,248,.13);
+  font-size: 10px;
+}
+
+/* EDUCATION */
+
+.timeline {
+  max-width: 850px;
+  border-left: 1px solid rgba(56,189,248,.35);
+  margin-left: 9px;
+  padding-left: 30px;
+}
+
+.timeline-item {
+  position: relative;
+  padding: 0 0 35px;
+}
+
+.timeline-item:last-child { padding-bottom: 0; }
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -36px;
+  top: 8px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 15px rgba(56,189,248,.6);
+}
+
+.timeline-date {
+  color: var(--cyan);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.timeline-item h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 19px;
+  margin: 6px 0;
+}
+
+.timeline-item p { color: var(--muted); font-size: 13px; }
+
+/* CAREER */
+
+.career-box {
+  padding: clamp(28px, 5vw, 55px);
+  border: 1px solid rgba(56,189,248,.24);
+  border-radius: 25px;
+  background:
+    radial-gradient(ellipse at top right, rgba(56,189,248,.11), transparent 50%),
+    linear-gradient(135deg, #101d31, #0b1323);
+}
+
+.career-box h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(25px, 4vw, 39px);
+  line-height: 1.2;
+  margin: 15px 0;
+}
+
+.career-box p { color: var(--muted); max-width: 690px; }
+
+.career-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.career-tags span {
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  padding: 8px 13px;
+  font-size: 12px;
+  color: #d5e4f5;
+}
+
+/* CONTACT */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 23px;
+}
+
+.contact-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-top: 24px;
+}
+
+.contact-line > i {
+  width: 43px;
+  height: 43px;
+  flex: 0 0 43px;
+  display: grid;
+  place-items: center;
+  color: var(--cyan);
+  background: rgba(56,189,248,.09);
+  border: 1px solid var(--border);
+  border-radius: 13px;
+}
+
+.contact-line span {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.contact-line strong {
+  display: block;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.contact-line a:hover { color: var(--cyan); }
+
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.footer {
+  padding: 30px 0;
+  border-top: 1px solid var(--border);
+  background: rgba(5,9,17,.8);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer p { color: var(--muted); font-size: 12px; }
+.footer strong { color: var(--white); }
+
+.back-top {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  z-index: 100;
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  color: var(--bg);
+  background: var(--cyan);
+  box-shadow: 0 6px 22px rgba(56,189,248,.23);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: .3s;
+}
+
+.back-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* REVEAL ANIMATION */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity .75s ease, transform .75s ease;
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (min-width: 769px) {
+  .delay-1 { transition-delay: .1s; }
+  .delay-2 { transition-delay: .2s; }
+  .delay-3 { transition-delay: .3s; }
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+  .nav-inner { min-height: 80px; }
+  .brand-sub { letter-spacing: 1px; }
+  .nav-links { gap: 1px; }
+  .nav-links a { padding: 9px; font-size: 12px; }
+  .hero-layout { gap: 32px; grid-template-columns: 1.2fr .8fr; }
+  .profile-wrap { max-width: 300px; }
+  .card-grid { grid-template-columns: repeat(2, 1fr); }
+  .skills-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  html { scroll-padding-top: 80px; }
+
+  .container { width: 90%; }
+
+  .nav-inner { min-height: 76px; }
+
+  .logo-mark {
+    width: 47px;
+    height: 47px;
+    flex-basis: 47px;
+    border-radius: 14px;
+  }
+
+  .logo-mark::after { border-radius: 12px; }
+  .logo-mark span { font-size: 18px; }
+  .brand { gap: 10px; }
+  .brand-name { font-size: 15px; }
+  .brand-sub { font-size: 8px; letter-spacing: 1.3px; }
+
+  .menu-toggle {
+    display: grid;
+    place-items: center;
+    flex: 0 0 44px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    width: 100%;
+    padding: 14px 5% 20px;
+    background: rgba(8,13,24,.98);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: .25s;
+  }
+
+  .nav-links.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-links a { display: block; padding: 12px 14px; font-size: 14px; }
+
+  .hero { padding: 120px 0 65px; }
+
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .hero-content { text-align: center; }
+  .hero .eyebrow, .status { justify-content: center; }
+  .hero h1 { font-size: clamp(42px, 10vw, 65px); letter-spacing: -2px; }
+  .hero-description { margin-inline: auto; }
+  .hero-actions, .hero-socials { justify-content: center; }
+  .profile-wrap { width: min(75%, 285px); }
+
+  .orbit-one { left: -28px; }
+  .orbit-two { right: -22px; }
+
+  .stats { margin-top: 0; padding-top: 20px; }
+  .stat { padding: 21px 8px; }
+  .stat span { font-size: 10px; }
+
+  .section { padding: 75px 0; }
+  .section-heading { margin-bottom: 30px; }
+  .section-heading h2 { letter-spacing: -.8px; }
+
+  .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 20px; }
+  .card-grid { grid-template-columns: 1fr; }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); gap: 11px; }
+  .skill { min-height: 115px; padding: 16px; }
+
+  .card { padding: 23px; }
+  .project-card { min-height: 0; }
+
+  .footer-inner { justify-content: center; text-align: center; }
+}
+
+@media (max-width: 380px) {
+  .brand-name { font-size: 13px; }
+  .brand-sub { font-size: 7px; }
+  .hero h1 { font-size: 39px; }
+  .btn { padding: 12px 15px; font-size: 12px; }
+}
+
+/* Accessibility: reduce animation when requested */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+
+  .reveal { opacity: 1; transform: none; }
+}
+</style>
 </head>
+
 <body>
 
-  <!-- Full-Width Glass Taskbar -->
-  <div class="taskbar">
-    <div class="brand-container">
-      <div class="logo">Engr. MD RUMAN KHAN</div>
-      <div class="brand-email">mdrumankhan044@gmail.com</div>
-    </div>
-    <ul class="nav-links">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#skills">Toolkit</a></li>
-      <li><a href="#projects">Research</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+<!-- NAVIGATION -->
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+
+    <a href="#home" class="brand" aria-label="MD Ruman Khan home">
+      <div class="logo-mark"><span>RK</span></div>
+      <div>
+        <div class="brand-name">MD RUMAN KHAN</div>
+        <div class="brand-sub">CIVIL ENGINEERING PORTFOLIO</div>
+      </div>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="navLinks">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <nav aria-label="Main navigation">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact" class="nav-contact">Contact ↗</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+  <div class="hero-slides" aria-hidden="true">
+    <div class="hero-slide active"
+      style="background-image:url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=1920&q=80')"></div>
+    <div class="hero-slide"
+      style="background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80')"></div>
+    <div class="hero-slide"
+      style="background-image:url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1920&q=80')"></div>
   </div>
 
-  <!-- Hero Section with Background Infrastructure Image Slider -->
-  <section id="hero">
-    <div class="slider-bg">
-      <!-- High Quality Infrastructure Image Slides -->
-      <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=1920&q=80');"></div>
-      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=1920&q=80');"></div>
-      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1590483736622-39da86788790?auto=format&fit=crop&w=1920&q=80');"></div>
-      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1920&q=80');"></div>
-    </div>
-    <div class="slider-overlay"></div>
+  <div class="hero-shade"></div>
+  <div class="hero-grid"></div>
 
-    <div class="hero-content" data-aos="fade-up">
-      <div class="profile-img-container">
-        <!-- Static Profile Photo -->
-        <img src="profile.jpg" alt="Engr. MD RUMAN KHAN" class="profile-img">
-      </div>
-      <h1>Engr. MD RUMAN KHAN</h1>
-      <p>Civil Engineer | Structural Design, High-Rise & Hydrology Researcher</p>
-      <a href="#contact" class="btn-glow">Get In Touch <i class="fas fa-arrow-down"></i></a>
-    </div>
+  <div class="container hero-layout">
 
-    <!-- Front Page Infrastructure Showcase -->
-    <div class="infra-showcase" data-aos="fade-up" data-aos-delay="200">
-      <h3>Engineering Specializations</h3>
-      <div class="infra-grid">
-        
-        <div class="infra-card">
-          <i class="fas fa-road"></i>
-          <h4>Highway Design</h4>
-        </div>
+    <div class="hero-content reveal">
 
-        <div class="infra-card">
-          <i class="fas fa-archway"></i>
-          <h4>Bridge Engineering</h4>
-        </div>
-
-        <div class="infra-card">
-          <i class="fas fa-water"></i>
-          <h4>Concrete Culvert</h4>
-        </div>
-
-        <div class="infra-card">
-          <i class="fas fa-mountain"></i>
-          <h4>Tunnel Infrastructure</h4>
-        </div>
-
-        <div class="infra-card">
-          <i class="fas fa-building"></i>
-          <h4>High-Rise Building</h4>
-        </div>
-
-        <div class="infra-card">
-          <i class="fas fa-train"></i>
-          <h4>Railway Track</h4>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Software & Skills Toolkit -->
-  <section id="skills">
-    <h2 class="section-title" data-aos="fade-right">Software & Technical Toolkit</h2>
-    <div class="software-grid">
-      
-      <div class="software-box" data-aos="zoom-in">
-        <div class="software-icon"><i class="fas fa-cubes"></i></div>
-        <div>
-          <h4>ETABS</h4>
-          <p style="font-size: 12px; color: var(--text-muted);">Multi-Story Analysis</p>
-        </div>
+      <div class="status">
+        <span class="status-dot"></span>
+        CIVIL ENGINEERING · DUET, BANGLADESH
       </div>
 
-      <div class="software-box" data-aos="zoom-in" data-aos-delay="100">
-        <div class="software-icon"><i class="fas fa-draw-polygon"></i></div>
-        <div>
-          <h4>STAAD.Pro</h4>
-          <p style="font-size: 12px; color: var(--text-muted);">Structural Steel</p>
-        </div>
+      <div class="eyebrow">WELCOME TO MY PORTFOLIO</div>
+
+      <h1>
+        MD RUMAN
+        <span class="second-line gradient-text">KHAN.</span>
+      </h1>
+
+      <div class="hero-role">
+        Civil Engineering | Structural Design & Water Resources
       </div>
 
-      <div class="software-box" data-aos="zoom-in" data-aos-delay="200">
-        <div class="software-icon"><i class="fas fa-drafting-compass"></i></div>
-        <div>
-          <h4>AutoCAD 2D/3D</h4>
-          <p style="font-size: 12px; color: var(--text-muted);">Civil Drafting</p>
-        </div>
+      <p class="hero-description">
+        Civil Engineering student at Dhaka University of Engineering
+        & Technology (DUET), Bangladesh. Interested in structural
+        analysis, engineering design, hydrology, climate modelling
+        and flood-risk research.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          Explore My Work <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="cv.pdf" class="btn btn-outline" download>
+          Download CV <i class="fas fa-download"></i>
+        </a>
       </div>
 
-      <div class="software-box" data-aos="zoom-in" data-aos-delay="300">
-        <div class="software-icon"><i class="fab fa-python"></i></div>
-        <div>
-          <h4>Python / CDO</h4>
-          <p style="font-size: 12px; color: var(--text-muted);">Climate Model Data</p>
-        </div>
+      <div class="hero-socials">
+        <a href="mailto:mdrumankhan044@gmail.com"
+          aria-label="Email" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+
+        <!-- Replace this URL with your actual LinkedIn profile -->
+        <a href="https://www.linkedin.com/"
+          target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn" title="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+
+        <a href="#contact" aria-label="Contact" title="Contact">
+          <i class="fas fa-paper-plane"></i>
+        </a>
       </div>
 
     </div>
-  </section>
 
-  <!-- Research & Projects -->
-  <section id="projects">
-    <h2 class="section-title" data-aos="fade-right">Featured Projects & Research</h2>
-    <div class="grid-container">
-      
-      <div class="glass-card" data-aos="fade-up">
-        <i class="fas fa-water" style="font-size: 35px; color: var(--accent-blue); margin-bottom: 15px;"></i>
+    <div class="profile-wrap reveal delay-2">
+      <div class="profile-inner">
+        <img src="profile.jpg"
+          alt="MD Ruman Khan, Civil Engineering student"
+          onerror="this.style.display='none';">
+        <div class="profile-caption">
+          <strong>MD Ruman Khan</strong>
+          <span>Civil Engineering · DUET</span>
+        </div>
+      </div>
+
+      <div class="photo-orbit orbit-one" aria-hidden="true">
+        <i class="fas fa-drafting-compass"></i>
+      </div>
+
+      <div class="photo-orbit orbit-two" aria-hidden="true">
+        <i class="fas fa-building"></i>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- QUICK HIGHLIGHTS -->
+<div class="container stats reveal">
+  <div class="stats-grid">
+    <div class="stat">
+      <strong>DUET</strong>
+      <span>Academic Institution</span>
+    </div>
+    <div class="stat">
+      <strong>AutoCAD</strong>
+      <span>Technical Drafting</span>
+    </div>
+    <div class="stat">
+      <strong>ETABS</strong>
+      <span>Structural Modelling</span>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <div class="eyebrow">GET TO KNOW ME</div>
+      <h2>Engineering with <span class="gradient-text">Purpose.</span></h2>
+      <p>A little about my academic background, technical interests and future goals.</p>
+    </div>
+
+    <div class="about-grid">
+
+      <div class="about-copy reveal">
+        <p>
+          Hello! I am <strong>MD Ruman Khan</strong>, a Civil Engineering
+          student at <strong>Dhaka University of Engineering & Technology
+          (DUET)</strong>, Bangladesh.
+        </p>
+
+        <p>
+          My academic interests include structural engineering,
+          construction, water resources engineering, hydrology and
+          climate-related flood research.
+        </p>
+
+        <p>
+          My undergraduate research focuses on rainfall, river discharge
+          and flood-related analysis in the Ganges River Basin using
+          climate-model data.
+        </p>
+
+        <p>
+          I aim to strengthen my engineering skills, contribute to
+          practical civil engineering projects and pursue research-based
+          postgraduate study.
+        </p>
+
+        <a href="#contact" class="btn btn-outline">
+          Let's Connect <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="info-panel reveal delay-1">
+        <div class="info-row">
+          <span>Full Name</span>
+          <strong>MD Ruman Khan</strong>
+        </div>
+        <div class="info-row">
+          <span>Institution</span>
+          <strong>DUET, Gazipur</strong>
+        </div>
+        <div class="info-row">
+          <span>Discipline</span>
+          <strong>Civil Engineering</strong>
+        </div>
+        <div class="info-row">
+          <span>Interests</span>
+          <strong>Structural Design, Hydrology & Climate Research</strong>
+        </div>
+        <div class="info-row">
+          <span>Location</span>
+          <strong>Bangladesh</strong>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section" id="skills">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <div class="eyebrow">MY TOOLKIT</div>
+      <h2>Technical <span class="gradient-text">Skills.</span></h2>
+      <p>Engineering software and technical areas relevant to my academic work.</p>
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="skill reveal">
+        <i class="fas fa-drafting-compass"></i>
+        <strong>AutoCAD 2D/3D</strong>
+        <span>Civil Drafting</span>
+      </div>
+
+      <div class="skill reveal delay-1">
+        <i class="fas fa-building"></i>
+        <strong>ETABS</strong>
+        <span>Structural Modelling</span>
+      </div>
+
+      <div class="skill reveal delay-2">
+        <i class="fas fa-cubes"></i>
+        <strong>Structural Analysis</strong>
+        <span>Engineering Design</span>
+      </div>
+
+      <div class="skill reveal delay-3">
+        <i class="fas fa-water"></i>
+        <strong>Hydrology</strong>
+        <span>Rainfall & River Flow</span>
+      </div>
+
+      <div class="skill reveal">
+        <i class="fas fa-cloud-rain"></i>
+        <strong>Climate Research</strong>
+        <span>Climate Model Data</span>
+      </div>
+
+      <div class="skill reveal delay-1">
+        <i class="fas fa-chart-line"></i>
+        <strong>Data Analysis</strong>
+        <span>Research & Interpretation</span>
+      </div>
+
+      <div class="skill reveal delay-2">
+        <i class="fas fa-file-alt"></i>
+        <strong>Technical Reporting</strong>
+        <span>Engineering Documentation</span>
+      </div>
+
+      <div class="skill reveal delay-3">
+        <i class="fas fa-hard-hat"></i>
+        <strong>Construction</strong>
+        <span>Engineering Fundamentals</span>
+      </div>
+
+    </div>
+
+    <p style="color:var(--muted);font-size:11px;margin-top:20px;">
+      Note: Keep only the software and skills you can confidently demonstrate.
+    </p>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <div class="eyebrow">SELECTED WORK</div>
+      <h2>Projects & <span class="gradient-text">Research.</span></h2>
+      <p>Academic research and engineering work. Add your drawings, reports and verified project details as they become available.</p>
+    </div>
+
+    <div class="card-grid">
+
+      <article class="card project-card reveal">
+        <div class="project-top">
+          <div class="card-icon"><i class="fas fa-water"></i></div>
+          <span class="project-number">01</span>
+        </div>
+
+        <span class="card-label">B.Sc. Thesis Research</span>
         <h3>Ganges Basin Flood Research</h3>
-        <p style="color: var(--text-muted); margin-top: 10px;">
-          B.Sc. thesis research at DUET evaluating rainfall thresholds and river discharge dynamics using CMIP6 climate models.
+        <p>
+          Research on rainfall, river discharge and flood-related
+          thresholds in the Ganges River Basin, including the evaluation
+          of climate-model data and its relevance to downstream
+          flood risk in Bangladesh.
+        </p>
+        <div class="project-tags">
+          <span>Hydrology</span>
+          <span>CMIP6</span>
+          <span>Flood Risk</span>
+        </div>
+      </article>
+
+      <article class="card project-card reveal delay-1">
+        <div class="project-top">
+          <div class="card-icon"><i class="fas fa-building"></i></div>
+          <span class="project-number">02</span>
+        </div>
+
+        <span class="card-label">Structural Engineering</span>
+        <h3>Structural Frame Analysis</h3>
+        <p>
+          Academic structural-analysis work involving ETABS,
+          load combinations and structural design considerations
+          using relevant building-code requirements.
+        </p>
+        <div class="project-tags">
+          <span>ETABS</span>
+          <span>BNBC 2020</span>
+          <span>Structural Analysis</span>
+        </div>
+      </article>
+
+      <article class="card project-card reveal delay-2">
+        <div class="project-top">
+          <div class="card-icon"><i class="fas fa-ruler-combined"></i></div>
+          <span class="project-number">03</span>
+        </div>
+
+        <span class="card-label">CAD & Drafting</span>
+        <h3>Civil Engineering Drawings</h3>
+        <p>
+          A portfolio space for verified AutoCAD plans, building
+          drawings, engineering details and other academic drafting
+          assignments.
+        </p>
+        <div class="project-tags">
+          <span>AutoCAD</span>
+          <span>Drafting</span>
+          <span>Technical Drawings</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section" id="education">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <div class="eyebrow">ACADEMIC BACKGROUND</div>
+      <h2>My <span class="gradient-text">Education.</span></h2>
+      <p>My educational journey in civil engineering and technical studies.</p>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-date">BACHELOR'S DEGREE</div>
+        <h3>B.Sc. in Civil Engineering</h3>
+        <p>Dhaka University of Engineering & Technology (DUET), Gazipur, Bangladesh.</p>
+        <p style="margin-top:8px;">
+          Graduation year and final CGPA: Update when confirmed.
         </p>
       </div>
 
-      <div class="glass-card" data-aos="fade-up" data-aos-delay="100">
-        <i class="fas fa-building" style="font-size: 35px; color: var(--accent-red); margin-bottom: 15px;"></i>
-        <h3>Multi-Story Structural Frame</h3>
-        <p style="color: var(--text-muted); margin-top: 10px;">
-          ETABS dynamic structural modeling under BNBC 2020 guidelines and LRFD load combination rules.
+      <div class="timeline-item reveal">
+        <div class="timeline-date">2020</div>
+        <h3>Diploma in Civil Engineering</h3>
+        <p>Dhaka Polytechnic Institute, Bangladesh.</p>
+        <p style="margin-top:8px;">CGPA: 3.67 / 4.00</p>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-date">2016</div>
+        <h3>SSC / Vocational</h3>
+        <p>S.M. Mozzamel Haque Technical School and Business Management College.</p>
+        <p style="margin-top:8px;">Result: GPA 5.00</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CAREER GOALS -->
+<section class="section">
+  <div class="container">
+
+    <div class="career-box reveal">
+      <div class="eyebrow">WHAT'S NEXT</div>
+      <h2>Building my future in <span class="gradient-text">Engineering.</span></h2>
+
+      <p>
+        I am interested in entry-level civil engineering opportunities,
+        structural engineering work and research-based postgraduate
+        study in water resources, hydrology, climate impacts and flood risk.
+      </p>
+
+      <div class="career-tags">
+        <span><i class="fas fa-hard-hat"></i> Civil Engineering</span>
+        <span><i class="fas fa-building"></i> Structural Design</span>
+        <span><i class="fas fa-water"></i> Water Resources</span>
+        <span><i class="fas fa-graduation-cap"></i> Higher Studies</span>
+      </div>
+
+      <div style="margin-top:27px;">
+        <a href="#contact" class="btn btn-primary">
+          Discuss Opportunities <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <div class="eyebrow">GET IN TOUCH</div>
+      <h2>Let's <span class="gradient-text">Connect.</span></h2>
+      <p>For professional opportunities, engineering collaboration and academic research.</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="card reveal">
+        <div class="card-icon"><i class="fas fa-address-card"></i></div>
+        <h3>Contact Information</h3>
+        <p>Feel free to contact me using the details below.</p>
+
+        <div class="contact-line">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <span>Email</span>
+            <strong>
+              <a href="mailto:mdrumankhan044@gmail.com">
+                mdrumankhan044@gmail.com
+              </a>
+            </strong>
+          </div>
+        </div>
+
+        <div class="contact-line">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <span>Location</span>
+            <strong>Bangladesh</strong>
+          </div>
+        </div>
+
+        <div class="contact-line">
+          <i class="fas fa-graduation-cap"></i>
+          <div>
+            <span>Institution</span>
+            <strong>DUET, Gazipur</strong>
+          </div>
+        </div>
+
+        <div class="contact-buttons">
+          <a href="mailto:mdrumankhan044@gmail.com"
+             class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i> Email Me
+          </a>
+
+          <a href="cv.pdf" download class="btn btn-outline">
+            <i class="fas fa-file-pdf"></i> Download CV
+          </a>
+        </div>
+      </div>
+
+      <div class="card reveal delay-1">
+        <div class="card-icon">
+          <i class="fab fa-linkedin-in"></i>
+        </div>
+        <h3>Professional Profile</h3>
+        <p>
+          Connect with me professionally, learn about my academic
+          background and explore potential engineering or research
+          opportunities.
+        </p>
+
+        <div class="contact-line">
+          <i class="fas fa-user-tie"></i>
+          <div>
+            <span>Professional Identity</span>
+            <strong>MD Ruman Khan</strong>
+          </div>
+        </div>
+
+        <div class="contact-buttons">
+          <!-- IMPORTANT: Replace with your real LinkedIn profile URL -->
+          <a href="https://www.linkedin.com/"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn btn-primary">
+            <i class="fab fa-linkedin-in"></i> LinkedIn Profile
+          </a>
+        </div>
+
+        <p style="margin-top:20px;font-size:11px;">
+          Please update the LinkedIn button with your personal profile URL.
         </p>
       </div>
 
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Contact Info Section -->
-  <section id="contact">
-    <h2 class="section-title" data-aos="fade-right">Contact Information</h2>
-    <div class="grid-container">
-      
-      <div class="glass-card" data-aos="fade-up">
-        <i class="fas fa-envelope-open-text" style="font-size: 35px; color: var(--accent-blue); margin-bottom: 15px;"></i>
-        <h3>Direct Contact</h3>
-        <p style="color: var(--text-muted); margin-top: 10px;"><strong>Location:</strong> Gazipur, Dhaka, Bangladesh</p>
-        <p style="color: var(--text-muted);"><strong>Email:</strong> mdrumankhan044@gmail.com</p>
-        <div style="margin-top: 25px;">
-          <a href="cv.pdf" download class="btn-glow"><i class="fas fa-download"></i> Download Full CV</a>
-        </div>
-      </div>
+</main>
 
-      <div class="glass-card" data-aos="fade-up" data-aos-delay="100">
-        <i class="fab fa-linkedin" style="font-size: 35px; color: #0077b5; margin-bottom: 15px;"></i>
-        <h3>Professional Profiles</h3>
-        <p style="color: var(--text-muted); margin-top: 10px;">
-          Available for Civil Engineering roles, structural design projects, and postgraduate research.
-        </p>
-        <div style="margin-top: 25px;">
-          <a href="https://linkedin.com" target="_blank" class="btn-glow" style="background: #0077b5;"><i class="fab fa-linkedin"></i> LinkedIn Profile</a>
-        </div>
-      </div>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>© <span id="year">2026</span> <strong>MD Ruman Khan</strong>. All rights reserved.</p>
+    <p>Designed for Civil Engineering · Bangladesh</p>
+  </div>
+</footer>
 
-    </div>
-  </section>
+<a href="#home" class="back-top" id="backTop" aria-label="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</a>
 
-  <footer>
-    <p>© 2026 Engr. MD RUMAN KHAN | Civil Engineering Portfolio</p>
-  </footer>
+<script>
+(function () {
+  "use strict";
 
-  <!-- AOS Script & Background Auto Slider Script -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true });
+  const navbar = document.getElementById("navbar");
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+  const backTop = document.getElementById("backTop");
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
 
-    // Background Image Auto-Slider Logic (Every 4 seconds)
-    const slides = document.querySelectorAll('.slide');
-    let currentSlide = 0;
+  // Current year
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
 
-    function nextSlide() {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.add('active');
-    }
+  // Mobile navigation
+  function closeMenu() {
+    navLinks.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open navigation menu");
+    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+  }
 
-    setInterval(nextSlide, 4000);
-  </script>
+  menuToggle.addEventListener("click", function () {
+    const isOpen = navLinks.classList.toggle("open");
+
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
+    menuToggle.innerHTML = isOpen
+      ? '<i class="fas fa-times"></i>'
+      : '<i class="fas fa-bars"></i>';
+  });
+
+  navLinks.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") closeMenu();
+  });
+
+  // Navbar shadow and back-to-top button
+  function handleScroll() {
+    navbar.classList.toggle("scrolled", window.scrollY > 30);
+    backTop.classList.toggle("visible", window.scrollY > 450);
+  }
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  handleScroll();
+
+  // Reveal sections when they enter the viewport
+  const revealItems = document.querySelectorAll(".reveal");
+
+  if ("IntersectionObserver" in window && !reduceMotion) {
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealItems.forEach(function (item) {
+      observer.observe(item);
+    });
+  } else {
+    revealItems.forEach(function (item) {
+      item.classList.add("in-view");
+    });
+  }
+
+  // Hero background slideshow
+  const slides = document.querySelectorAll(".hero-slide");
+  let currentSlide = 0;
+  let slideTimer;
+
+  function showNextSlide() {
+    if (slides.length < 2) return;
+
+    slides[currentSlide].classList.remove("active");
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add("active");
+  }
+
+  function startSlider() {
+    if (reduceMotion || slides.length < 2) return;
+    if (slideTimer) clearInterval(slideTimer);
+    slideTimer = setInterval(showNextSlide, 6000);
+  }
+
+  startSlider();
+
+  // Highlight the navigation link for the visible section
+  const sections = document.querySelectorAll(
+    "#home, #about, #skills, #projects, #education, #contact"
+  );
+
+  if ("IntersectionObserver" in window) {
+    const sectionObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+
+        const id = entry.target.id;
+        navLinks.querySelectorAll("a").forEach(function (link) {
+          const active = link.getAttribute("href") === "#" + id;
+          link.classList.toggle("active", active);
+        });
+      });
+    }, { rootMargin: "-25% 0px -60% 0px" });
+
+    sections.forEach(function (section) {
+      sectionObserver.observe(section);
+    });
+  }
+
+})();
+</script>
+
 </body>
 </html>
